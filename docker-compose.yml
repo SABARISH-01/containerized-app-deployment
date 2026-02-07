@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  web-app:
+    build: .
+    ports:
+      - "8080:5000"
+    volumes:
+      - my_data_vol:/app/data
+    container_name: compose-app
+
+volumes:
+  my_data_vol:
